@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: #FAF8F5; /* Warm alabaster marble / light gold-tinged off-white */
+    color: #1F2937; /* Off-black slate gray for absolute legibility */
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+}
+
+/* Custom animation for pulsating glow on primary CTAs */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(181, 146, 77, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(181, 146, 77, 0.6);
+  }
+}
+
+.glow-btn-pulse {
+  animation: glow-pulse 2.5s infinite ease-in-out;
+}
+
+/* Custom elegant scrollbar for lighter corporate scheme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A059;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B38F4A;
+}
